@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact Submission{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="mt-5 mb-4">Contact Submission</h1>
+
+        {# Display success or error messages #}
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="alert alert-{{ label }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+
+        <p>Thank you for contacting us! We have received your message and will get back to you as soon as possible.</p>
+
+        {# Optional: Provide a link to return to the contact form #}
+        <p>
+            <a href="{{ path('contact') }}" class="btn btn-primary">Back to Contact Form</a>
+        </p>
+    </div>
+{% endblock %}

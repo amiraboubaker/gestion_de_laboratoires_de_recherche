@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Publications</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Auteurs</th>
+                <th>Date de publication</th>
+                <th>Revue</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for publication in publications %}
+                <tr>
+                    <td>{{ publication.title }}</td>
+                    <td>{{ publication.authors }}</td>
+                    <td>{{ publication.publicationDate }}</td>
+                    <td>{{ publication.journal }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('publication_new') }}" class="btn btn-primary">Créer une nouvelle publication</a>
+{% endblock %}

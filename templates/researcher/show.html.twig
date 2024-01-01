@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>{{ researcher.name }}</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Nom</th>
+                <td>{{ researcher.name }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ researcher.email }}</td>
+            </tr>
+            <tr>
+                <th>Rôle</th>
+                <td>{{ researcher.role }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('researcher_edit', {'id': researcher.id}) }}" class="btn btn-primary">Modifier</a>
+    <a href="{{ path('researcher_delete', {'id': researcher.id}) }}" class="btn btn-danger">Supprimer</a>
+{% endblock %}

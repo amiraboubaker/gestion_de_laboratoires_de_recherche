@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Notre Laboratoire de Recherche{% endblock %}
+
+{% block body %}
+
+<div class="container">
+  <h1 class="mt-5 mb-4">Laboratoire de Recherche</h1>
+
+  <div class="row">
+    <div class="col-md-6">
+      <img src="{{ asset('https://www.ote-ingenierie.com/wp-content/uploads/2019/07/laboratoire-recherche-unites-de-production-pharmaceutique-des-laboratoires-boiron-e1564389249552.jpg') }}" alt="Image du laboratoire" class="img-fluid" style="max-width: 500px, text-align: center">
+    </div>
+    <br><br>
+      <hr>
+    <br><br>
+    <div class="col-md-6">
+      <h2>Nos domaines d'expertise</h2>
+      <ul>
+        <li>Recherche fondamentale en Cosmétique</li>
+        <li>Développement de nouvelles technologies</li>
+        <li>Transfert de connaissances vers l'industrie</li>
+        <li>Formation de la prochaine génération de chercheurs</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Nos atouts</h2>
+      <br>
+      <img src="{{ asset('https://0f30179cc1.clvaw-cdnwnd.com/829a2ae16c277d378448c620e286b328/200000034-08b8108b83/page-2.jpg?ph=0f30179cc1') }}" alt="Image des atouts" class="img-fluid" style="max-width: 500px;">
+      <br><br>
+      <ul>
+        <li>Une équipe de chercheurs hautement qualifiés et expérimentés</li>
+        <li>Des équipements de pointe</li>
+        <li>Un réseau de collaborations internationales</li>
+        <li>Un environnement de travail stimulant et convivial</li>
+      </ul>
+    </div>
+     <hr>
+    <div class="col-md-6">
+      <h2>Nos partenaires</h2>
+      <br>
+      <img src="{{ asset('https://img.freepik.com/vecteurs-libre/equipe-commerciale-mettant-ensemble-jigsaw-puzzle-isole-illustration-vectorielle-plane-partenaires-dessin-anime-travaillant-connexion-concept-travail-equipe-partenariat-cooperation_74855-9814.jpg?w=900&t=st=1704106563~exp=1704107163~hmac=f62cf99bab542219a552513bdc883da87652341eeb7e339b7498f0c4541e7bb8') }}" alt="Image des partenaires" class="img-fluid" style="max-width: 500px;">
+      <br> <br>
+      <p>Le laboratoire de recherche collabore avec de nombreux partenaires académiques et industriels, tant au niveau national qu'international. Ces collaborations nous permettent de mutualiser nos expertises et de mener des projets de recherche ambitieux.</p>
+      <p>Vous souhaitez collaborer avec nous ? N'hésitez pas à nous contacter !</p>
+      <a href="#" class="btn btn-primary">Contact</a>
+    </div>
+  </div>
+</div>
+ <br> <br>
+{% endblock %}

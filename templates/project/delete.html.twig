@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Supprimer le projet</h1>
+
+    <p>Voulez-vous vraiment supprimer le projet "{{ project.title }}" ?</p>
+
+    <a href="{{ path('project_delete_confirm', {'id': project.id}) }}" class="btn btn-danger">Supprimer</a>
+    <a href="{{ path('project_index') }}" class="btn btn-primary">Annuler</a>
+{% endblock %}

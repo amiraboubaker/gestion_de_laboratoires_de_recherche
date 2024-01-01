@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>{{ equipement.name }}</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Nom</th>
+                <td>{{ equipement.name }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ equipment.description }}</td>
+            </tr>
+            <tr>
+                <th>Location</th>
+                <td>{{ equipment.location }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('equipement_edit', {'id': equipement.id}) }}" class="btn btn-primary">Modifier</a>
+    <a href="{{ path('equipement_delete', {'id': equipement.id}) }}" class="btn btn-danger">Supprimer</a>
+{% endblock %}

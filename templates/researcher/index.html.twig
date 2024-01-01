@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Chercheurs</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Email</th>
+                <th>Rôle</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for researcher in researchers %}
+                <tr>
+                    <td>{{ researcher.name }}</td>
+                    <td>{{ researcher.email }}</td>
+                    <td>{{ researcher.role }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('researcher_new') }}" class="btn btn-primary">Créer un nouveau chercheur</a>
+{% endblock %}
+

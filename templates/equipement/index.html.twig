@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <table class="table">
+    <caption>Nos Equipements</caption>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>Piece</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for equipement in equipements %}
+                <tr>
+                    <td>{{ equipement.name }}</td>
+                    <td>{{ equipement.description }}</td>
+                    <td>{{ equipement.location }}</td>
+                    <td>{{ equipement.status }}</td>
+                    <td>{{ equipement.researchers }}</td>
+                    <td>{{ equipement.projects }}</td>
+                    <td>{{ equipement.publications }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('equipement_new') }}" class="btn btn-primary">Créer un nouvel equipement</a>
+{% endblock %}
